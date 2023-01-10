@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -33,8 +34,8 @@
 
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="#research" class="nav-link">Research</a>
+            <li class="nav-item" >
+              <a href="#about" class="nav-link" >Research</a>
             </li>
             <li class="nav-item">
               <a href="#education" class="nav-link">Education</a>
@@ -50,7 +51,7 @@
       </div>
     </nav>
     <!--Me-->
-    <section class="bg-dark text-light p-5 text-center">
+    <section class="bg-dark text-light p-5 text-center ">
       <div class="container">
         <div class="d-sm-flex align-items-center justify-content-between">
           <div class="col-sm-6">
@@ -78,7 +79,7 @@
     </section>
 
     <!--About-->
-    <section class="p-3 mb-2 bg-light text-dark">
+    <section class="p-3 bg-light text-dark" id="about">
       <div class="container mt-3">
         <h1>About</h1>
         <p>
@@ -95,7 +96,7 @@
           UW-Madison.
         </p>
       </div>
-      <div class="container mt-5">
+      <div class="container mt-5" id="research">
         <h1>Experience</h1>
 
         <div class="d-flex mt-4">
@@ -164,11 +165,101 @@
         </div>
       </div>
       <div class="container mt-5">
-        <h1>Education
-        </h1>
+        <h1>Education</h1>
+        <div class="d-flex mt-4">
+          <img
+            src="img/madison.jpeg"
+            class="me-3"
+            style="width: 64px; height: 64px; object-fit: cover"
+          />
+          <div>
+            <h5 class="mt-0 mb-1 me-5">University of Wisconsin Madison</h5>
+            <p class="badge text-primary">B.S. in Math & CS</p>
+            <p class="badge text-primary">GPA 4.0/4.0</p>
+          </div>
+          <div class="ms-auto text-center">
+            <h5 class="text-secondary">September 2021 - present</h5>
+            <button class="btn btn-outline-primary btn-sm">
+              Check Courses Taken
+            </button>
+          </div>
+        </div>
+        <div class="d-flex mt-4">
+          <img
+            src="img/highschool.jpg"
+            class="me-3"
+            style="width: 64px; height: 64px; object-fit: cover"
+          />
+          <div>
+            <h5 class="mt-0 mb-1 me-5">Tianjin No. 1 High School</h5>
+            <p class="badge text-primary">
+              Science Innovation Talents Training Project Experimental Class
+            </p>
+          </div>
+          <h5 class="text-secondary ms-auto">September 2018 - July 2021</h5>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <h1>Others</h1>
+        <ul class="list-group mx-auto">
+          <div class="list-group-item">
+            <span
+              class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2"
+              style="background-color: #0082ca; width: 40px; height: 40px;"
+            >
+              <a
+                class="btn text-white"
+                href="docs/Power of 2 in the Cantor Set.pdf"
+                style="text-decoration: none; color: inherit;"
+              >
+                <i class="fa-regular fa-file"></i>
+              </a>  
+            </span>
+            <a
+              href="docs/Power of 2 in the Cantor Set.pdf"
+              style="text-decoration: none"
+              >Check the Recent Hornor Paper I wrote for Math 521 (Intro to
+              Mathematical Analysis), though it is mostly Number Theory</a
+            >
+          </div>
+          <div class="list-group-item">
+            <div
+              class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2"
+              style="background-color: #00b386; width: 40px; height: 40px"
+            >
+              <i class="fas fa-hiking fa-lg"></i>
+            </div>
+            I like traveling and hiking. Some famous National Parks that I've
+            visited are Yosemite, Yellow Stone, Grand Canyon, Rocky Mountain.
+          </div>
+
+          <div class="list-group-item">
+            <div
+              class="d-inline-flex align-items-center justify-content-center text-white rounded m-1 me-2"
+              style="background-color: #ff4500; width: 40px; height: 40px"
+            >
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            I like math a lot. I spent quite some time playing with contest like
+            math problems during high school.
+          </div>
+        </ul>
       </div>
     </section>
 
+    <footer class="p-3 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="small mt-2">&copy;2022 Chris Cai Powered by Bootstrap 5</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3 mb-1">
+          <i class="bi bi-arrow-up-circle h2"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/1c15b323a1.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
