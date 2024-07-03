@@ -355,6 +355,16 @@
           </div>
         </ul>
       </div>
+
+      <div class="container mt-4">
+        <h2 class="mb-3">Conway's Game of Life</h2>
+        <canvas id="gameCanvas" width="600" height="400" class="border"></canvas>
+        <div class="mt-3">
+          <button id="startStopBtn" class="btn btn-primary">Start</button>
+          <button id="clearBtn" class="btn btn-secondary ms-2">Clear</button>
+        </div>
+      </div>
+
       <!--Contact-->
       <div class="container mt-5 text-center" id="contact">
         <h1>Contact</h1>
@@ -399,5 +409,103 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
+    <script>const canvas = document.getElementById('gameCanvas');
+      const ctx = canvas.getContext('2d');
+      const startStopBtn = document.getElementById('startStopBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      
+      const cellSize = 10;
+      const cols = canvas.width / cellSize;
+      const rows = canvas.height / cellSize;
+      
+      let grid = createGrid();
+      let isRunning = false;
+      let intervalId = null;
+      
+      function createGrid() {
+          return new Array(rows).fill(null)
+              .map(() => new Array(cols).fill(0));
+      }
+      
+      function drawGrid() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for (let y = 0; y < rows; y++) {
+              for (let x = 0; x < cols; x++) {
+                  if (grid[y][x] === 1) {
+                      ctx.fillStyle = 'black';
+                      ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+                  }
+                  ctx.strokeStyle = '#ddd';
+                  ctx.strokeRect(x * cellSize, y * cellSize, cellSize, cellSize);
+              }
+          }
+      }
+      
+      function updateGrid() {
+          const newGrid = createGrid();
+          for (let y = 0; y < rows; y++) {
+              for (let x = 0; x < cols; x++) {
+                  const neighbors = countNeighbors(x, y);
+                  if (grid[y][x] === 1) {
+                      newGrid[y][x] = (neighbors === 2 || neighbors === 3) ? 1 : 0;
+                  } else {
+                      newGrid[y][x] = (neighbors === 3) ? 1 : 0;
+                  }
+              }
+          }
+          grid = newGrid;
+      }
+      
+      function countNeighbors(x, y) {
+          let count = 0;
+          for (let i = -1; i <= 1; i++) {
+              for (let j = -1; j <= 1; j++) {
+                  if (i === 0 && j === 0) continue;
+                  const newX = (x + i + cols) % cols;
+                  const newY = (y + j + rows) % rows;
+                  count += grid[newY][newX];
+              }
+          }
+          return count;
+      }
+      
+      function startStop() {
+          isRunning = !isRunning;
+          if (isRunning) {
+              startStopBtn.textContent = 'Stop';
+              intervalId = setInterval(() => {
+                  updateGrid();
+                  drawGrid();
+              }, 100);
+          } else {
+              startStopBtn.textContent = 'Start';
+              clearInterval(intervalId);
+          }
+      }
+      
+      function clearGrid() {
+          grid = createGrid();
+          drawGrid();
+          if (isRunning) {
+              startStop();
+          }
+      }
+      
+      canvas.addEventListener('click', (event) => {
+          if (!isRunning) {
+              const rect = canvas.getBoundingClientRect();
+              const x = Math.floor((event.clientX - rect.left) / cellSize);
+              const y = Math.floor((event.clientY - rect.top) / cellSize);
+              grid[y][x] = 1 - grid[y][x];
+              drawGrid();
+          }
+      });
+      
+      startStopBtn.addEventListener('click', startStop);
+      clearBtn.addEventListener('click', clearGrid);
+      
+      drawGrid();
+      </script>
   </body>
 </html>
