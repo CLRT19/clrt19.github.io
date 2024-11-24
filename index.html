@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="-dePXyBq-kMFejjUalEbqj__3Q5BzURmHCEbpVYfsDs" />
   <meta name="description"
-    content="I'm a 2nd year Math and CS student at University of Wisconsin Madison. My research interest is Machine Learning, and I also have a strong interest in math." />
+    content="I'm a senior Math and CS student at University of Wisconsin Madison. My research focuses on data-efficient machine learning, foundations of ML, and robustness to mixed distributions, emphasizing learning with noise and limited data." />
   <meta name="keywords" content="Linrong Cai, Chris Cai, CLRT19" />
   <title>Chris Cai</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,7 +31,6 @@
           <li class="nav-item">
             <a href="#about" class="nav-link">About</a>
           </li>
-
           <li class="nav-item">
             <a href="#research" class="nav-link">Research</a>
           </li>
@@ -49,6 +48,7 @@
     </div>
   </nav>
   <!--Me-->
+
   <section class="bg-dark text-light p-5 text-center">
     <div class="container">
       <div class="d-sm-flex align-items-center justify-content-between">
@@ -66,11 +66,6 @@
               UW-Madison
             </a>
           </h3>
-          <!--
-            <a href="docs/CV.pdf"
-              ><button class="btn btn-outline-primary mx-2 mt-5">CV</button></a
-            >
-            -->
           <a href="https://clrt19.com/blog.github.io/"><button class="btn btn-outline-primary mx-2 mt-5">
               Blog
             </button></a>
@@ -91,24 +86,61 @@
           "></a>
       <h1>About</h1>
       <p>
-        I'm Linrong Cai/ Chris Cai, a rising senior Math and CS undergraduate at University of Wisconsin
-        Madison. My research interest is Machine Learning and Optimization, and I am doing
-        research study under Professor
-        <a href="https://pages.cs.wisc.edu/~fredsala/" style="text-decoration: none">
+        I'm Linrong Cai/ Chris Cai, a senior Math and CS undergraduate at University of Wisconsin
+        Madison. My research focuses on data-efficient machine learning, foundations of ML, and robustness to mixed distributions, emphasizing learning with noise and limited data. I am doing
+        research study under Professor <a href="https://pages.cs.wisc.edu/~fredsala/" style="text-decoration: none">
           Frederic Sala</a> and Professor <a href="https://www.jelena-diakonikolas.com" style="text-decoration: none">
-          Jelena Diakonikolas</a>. I have a strong interest in math, and have finished courses related
-        to Analysis, Measure Theory, Probability, Combinatorics, Abstract Algebra at
-        UW-Madison. Among them, my favorite topic is Analysis and Probability Theory. I am fortunate to worked with
+          Jelena Diakonikolas</a>. I also have a strong interest in Optimization, and have finished courses related to Analysis, Measure Theory, Probability, Combinatorics, Abstract Algebra at UW-Madison. You can take a look at my <a href="courses.html" style="text-decoration: none">courses taken</a> page.
+          
+          I am fortunate to be mentored by
         <a href="https://dyahadila.github.io" style="text-decoration: none">
           Dyah Adila</a>,
         <a href="https://nick11roberts.science" style="text-decoration: none">
           Nicholas Roberts</a>, and
         <a href="https://nikoszarifis.github.io" style="text-decoration: none">
-          Nikos Zarifis</a> at UW-Madison.
+          Nikos Zarifis</a>, at UW-Madison.
       </p>
     </div>
-
     
+    <div class="container mt-4">
+      
+      <h1>News</h1>
+      <div class="d-flex mt-4">
+        <h5 class="mt-0 mb-1 me-5">
+          I received NeurIPS 2024 Scholar Award 🎉!
+        </h5>
+        <h5 class="text-secondary ms-auto"> Oct 2024 </h5>
+      </div> 
+    
+    
+    <div class="d-flex mt-3">
+          <h5 class="mt-0 mb-1 me-5">
+            Our paper Stronger Than You Think 🔧 got accepted to NeurIPS 2024 D&B  !
+          </h5>
+        <h5 class="text-secondary ms-auto"> Sept 2024 </h5>
+    </div>
+
+    <div class="d-flex mt-3">
+          <h5 class="mt-0 mb-1 me-5">
+            Our paper on <a href="https://icml.cc/virtual/2024/36433" style="text-decoration: none">Benchmarking Weak Supervision on Realistic Tasks</a> got accepted to <a href="https://icml.cc/virtual/2024/workshop/29961" style="text-decoration: none">DMLR</a> at ICML 2024  !
+          </h5>
+        <h5 class="text-secondary ms-auto"> June 2024 </h5>
+    </div>
+
+    <div class="d-flex mt-3">
+        <h5 class="mt-0 mb-1 me-5">
+          Our paper <a href="https://arxiv.org/pdf/2309.04344" style="text-decoration: none">RoboShot 🤖</a> got accepted to ICLR 2024 !
+        </h5>
+      <h5 class="text-secondary ms-auto"> Jan 2024 </h5>
+    </div>
+
+    <div class="d-flex mt-3">
+        <h5 class="mt-0 mb-1 me-5">
+          Our paper on <a href="https://neurips.cc/virtual/2023/76545">robustifying foundation models</a> was awarded <b>best paper award honorable mention 🎉</b> at NeurIPS <a href="https://sites.google.com/view/r0-fomo">R0-FoMo workshop</a>!
+        </h5>
+      <h5 class="text-secondary ms-auto"> Dec 2023 </h5>
+    </div>
+  </div>
     <div class="container mt-4">
       <a id="research" style="
             position: relative;
@@ -117,24 +149,32 @@
             height: 0;
             overflow: hidden;
           "></a>
-
       <h1>Publications</h1>
-      <div class="mb-3">
-        <h5>Stronger Than You Think: Benchmarking Weak Supervision on Realistic Tasks</h5>
-        <h6 class="text-muted">Authors: Tianyi Zhang*, <b>Linrong Cai</b>*, Nicholas Roberts, Jeffrey Li, Neel Guha,
+      <div class="mt-4">
+        <h5>Stronger Than You Think: Benchmarking Weak Supervision on Realistic Tasks @ Neurips 2024 D&B</h5>
+        <h6 class="text-muted">Authors: <b>Linrong Cai</b>*, Tianyi Zhang*, Nicholas Roberts, Jeffrey Li, Neel Guha,
           Frederic Sala</h6>
-        <p><small class="text-muted">In Neurips 2024 D&B,In DMLR @ ICML 2024</small></p>
+        <!-- <p><small class="text-muted">In Neurips 2024 D&B,In DMLR @ ICML 2024</small></p> -->
       </div>
 
-      <div class="mb-3">
-        <h5>Zero-Shot Robustification of Zero-Shot Models</h5>
+      <div class="mt-4">
+        <h5>Zero-Shot Robustification of Zero-Shot Models @ ICLR 2024</h5>
         <h6 class="text-muted">Authors: Dyah Adila*, Changho Shin*, <b>Linrong Cai</b>, Frederic Sala</h6>
-        <a href="https://arxiv.org/pdf/2309.04344" class="link-primary">https://arxiv.org/pdf/2309.04344</a>
-        <p><small class="text-muted">In ICLR 2024</small></p>
+        <a href="https://arxiv.org/pdf/2309.04344"><button class="btn btn-outline-primary">
+          PDF
+        </button></a>
       </div>
+    </div>
+    <!-- Add more publication entries as needed -->
 
-      <!-- Add more publication entries as needed -->
-
+    <div class="container mt-4">
+      <a id="experience" style="
+            position: relative;
+            top: -70px;
+            display: block;
+            height: 0;
+            overflow: hidden;
+          "></a>
       <h1>Experience</h1>
 
       <div class="d-flex mt-4">
@@ -145,7 +185,7 @@
             <a href="https://www.jelena-diakonikolas.com" style="text-decoration: none">
               Jelena Diakonikolas</a>
           </h5>
-          <p>Currently working on topics related to Robust Learning.</p>
+          <p>Working on topics related to Learning with Distribution Mixtures and Noise.</p>
         </div>
         <h5 class="text-secondary ms-auto">Jan 2024 - present</h5>
       </div>
@@ -158,7 +198,7 @@
             <a href="https://pages.cs.wisc.edu/~fredsala/" style="text-decoration: none">
               Frederic Sala</a>
           </h5>
-          <p>Currently working on topics related to Weak Supervision, Alignment, and Robustification.</p>
+          <p>Working on topics related to Weak Supervision, Alignment, and Robustification.</p>
         </div>
         <h5 class="text-secondary ms-auto">June 2022 - present</h5>
       </div>
@@ -204,7 +244,8 @@
         <h5 class="text-secondary ms-auto">2023 Fall</h5>
       </div>
     </div>
-    <div class="container mt-5">
+
+    <div class="container mt-4">
       <a id="education" style="
             position: relative;
             top: -70px;
@@ -213,6 +254,7 @@
             overflow: hidden;
           "></a>
       <h1>Education</h1>
+
       <div class="d-flex mt-4">
         <img src="img/madison.jpeg" class="me-3" style="width: 64px; height: 64px; object-fit: cover" />
         <div>
@@ -221,7 +263,7 @@
             B.S. in Math & CS
           </p>
           <p class="badge rounded-pill" style="background-color: #0072ff">
-            GPA 3.98/4.0
+            GPA 3.987/4.000
           </p>
         </div>
         <div class="ms-auto text-center">
@@ -231,6 +273,7 @@
             </button></a>
         </div>
       </div>
+        
       <div class="d-flex mt-4">
         <img src="img/highschool.jpg" class="me-3" style="width: 64px; height: 64px; object-fit: cover" />
         <div>
@@ -243,7 +286,7 @@
       </div>
     </div>
 
-    <!--Others-->
+    <!-- Others
     <div class="container mt-5">
       <h1>Others</h1>
       <ul class="list-group mx-auto">
@@ -295,18 +338,8 @@
           </div>
         </div>
       </ul>
-    </div>
+    </div> -->
 
-    <!-- <div class="container mt-4 text-center"></div>
-        <h2 class="mb-3">Conway's Game of Life</h2>
-        <canvas id="gameCanvas" width="600" height="400" class="border"></canvas>
-        <div class="mt-3">
-          <button id="startStopBtn" class="btn btn-primary">Start</button>
-          <button id="clearBtn" class="btn btn-secondary ms-2">Clear</button>
-        </div>
-      </div> -->
-    <!--Centering the Conway's Game of Life Section-->
-    <!--Centering the Conway's Game of Life Section-->
     <div class="container mt-4 text-center">
       <h2 class="mb-3">Conway's Game of Life</h2>
       <div class="d-flex justify-content-center">
