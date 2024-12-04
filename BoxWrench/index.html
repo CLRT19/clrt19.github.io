@@ -50,7 +50,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Stronger Than You Think: Benchmarking Weak Supervision on Realistic Tasks</h1>
+            <h1 class="title is-1 publication-title">OTTER: Effortless Label Distribution Adaptation of Zero-shot Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -79,7 +79,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://github.com/jeffreywpli/stronger-than-you-think/blob/main/Stronger%20than%20you%20think.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2404.08461" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -99,7 +99,7 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link
+                <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2404.08461" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -108,7 +108,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <b>Weak supervision (WS)</b> is a popular approach for label-efficient learning, leveraging diverse sources of noisy but inexpensive <i>weak labels</i> to automatically  annotate training data. Despite its wide usage, WS and its practical value are challenging to benchmark due to the many knobs in its setup, including: data sources, labeling functions (LFs), aggregation techniques (called label models), and end model pipelines. Existing evaluation suites tend to be limited, focusing on particular components or specialized use cases. Moreover, they often involve simplistic benchmark tasks or de-facto LF sets that are suboptimally written, producing insights that may not generalize to real-world settings. We address these limitations by introducing a new benchmark, <b>BoxWRENCH</b>, designed to more accurately reflect <i>real-world usages of WS</i>. This benchmark features tasks with (1) higher class cardinality and imbalance, (2) notable domain expertise requirements, and (3) linguistic variations found in parallel corpora. For all tasks, LFs are written using a careful procedure aimed at mimicking real-world settings. In contrast to existing WS benchmarks, we show that supervised learning requires substantial amounts (1000+) of labeled examples to match WS in many settings. 
+            Popular zero-shot models suffer due to artifacts inherited from pretraining. One particularly detrimental issue, caused by unbalanced web-scale pretraining data, is mismatched label distribution. Existing approaches that seek to repair the label distribution are not suitable in zero-shot settings, as they have mismatching requirements, such as needing access to labeled downstream task data or knowledge of the true label balance in the pretraining distribution. We sidestep these challenges and introduce a simple and lightweight approach to adjust pretrained model predictions via optimal transport. Our technique requires only an estimate of the label distribution of a downstream task. Theoretically, we characterize the improvement produced by our procedure under certain mild conditions and provide bounds on the error caused by misspecification. Empirically, we validate our method in a wide array of zero-shot image and text classification tasks, improving accuracy by 4.8% and 15.9% on average, and beating baselines like prior matching---often by significant margins---in 17 out of 21 datasets.
           </p>
         </div>
       </div>
@@ -154,9 +154,9 @@ End paper poster -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{zhang2024boxwrench,
-title={Stronger Than You Think: Benchmarking Weak Supervision on Realistic Tasks},
-author={Zhang, Tianyi and Cai, Linrong and Li, Jeffrey and Roberts, Nicholas and Guha, Neel and Sala, Frederic},
+      <pre><code>@inproceedings{shin2024otter,
+title={OTTER: Effortless Label Distribution Adaptation of Zero-shot Models},
+author={Shin, Changho and Zhao, Jitian and Cromp, Sonia and Vishwakarma, Harit and Sala, Frederic},
 booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
 year={2024}
 }
