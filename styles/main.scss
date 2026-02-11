@@ -1,0 +1,92 @@
+$blue: #0051c9;
+@mixin larger {
+  font-size: 1.17em;
+}
+
+@mixin bold {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+}
+a:visited {
+  color: $blue;
+}
+
+body {
+  margin: 40px auto;
+  max-width: 800px;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+blockquote {
+  background: #f0f0f0;
+  text-align: justify;
+}
+
+.larger {
+  @include larger;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+.intro {
+  align-items: top;
+}
+.bio,
+.portrait {
+  padding-right: 1em;
+}
+.portrait {
+  flex-shrink: 0;
+}
+.bold {
+  @include bold;
+}
+
+.pub-header {
+  align-items: baseline;
+}
+.pub-title {
+  @include larger;
+}
+.pub {
+  padding-bottom: 1em;
+}
+.pub-conference {
+  display: inline-block;
+}
+
+.self-author {
+  @include bold;
+}
+.pub-links {
+  margin-left: auto;
+  width: 45px;
+}
+
+.experience {
+  padding-bottom: 1em;
+}
+.exp-header {
+  align-items: baseline;
+}
+.exp-date {
+  margin-left: auto;
+  white-space: nowrap;
+  color: #666;
+}
