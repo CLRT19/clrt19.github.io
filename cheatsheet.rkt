@@ -23,12 +23,13 @@
     @meta[charset: "UTF-8"]
     @named-meta["viewport"]{width=device-width, initial-scale=1.0}
     @link[rel: "stylesheet" href: "../assets/main.css"]
-    @link[rel: "stylesheet" href: "https://fonts.googleapis.com/css?family=Open+Sans:400,600"]
+    @link[rel: "stylesheet" href: "https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css"]
     @link[rel: "stylesheet" href: "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"]
     @script[defer: "defer" src: "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"]{}
     @script[defer: "defer" src: "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
             onload: "renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"]{}
     @style{
+      body { font-family: "Computer Modern Serif", serif; }
       .theorem, .definition, .remark { margin-bottom: 1em; }
       .theorem { border-left: 3px solid #0051c9; padding-left: 0.8em; }
       .definition { border-left: 3px solid #28a745; padding-left: 0.8em; }
