@@ -53,6 +53,9 @@ blockquote {
 }
 .portrait {
   flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 .bold {
   @include bold;
