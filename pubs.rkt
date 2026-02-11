@@ -116,7 +116,7 @@
                     #:conference (mk-conference
                                   "Conference on Neural Information Processing Systems, Datasets and Benchmarks Track"
                                   "NeurIPS 2024 D&B")
-                    #:url "https://clrt19.com/boxwrench"
+                    #:url "pages/boxwrench.html"
                     #:authors (list chris* "Tianyi Zhang*" "Nicholas Roberts" "Jeffrey Li" "Neel Guha" "Frederic Sala"))
             (mk-pub "zero-shot-robust:iclr2024"
                     #:title "Zero-Shot Robustification of Zero-Shot Models"

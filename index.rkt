@@ -69,8 +69,8 @@
    @a[href: "https://dyahadila.github.io"]{Dyah Adila},
    @a[href: "https://nick11roberts.science"]{Nicholas Roberts}, and
    @a[href: "https://nikoszarifis.github.io"]{Nikos Zarifis} at UW-Madison.}
-   @p{@a[href: "misc.html"]{Miscellaneous} @entity['middot]
-   @a[href: "courses.html"]{Courses} @entity['middot]
+   @p{@a[href: "pages/misc.html"]{Miscellaneous} @entity['middot]
+   @a[href: "pages/courses.html"]{Courses} @entity['middot]
    @|cv-link| @entity['middot]
    @a[href: "https://github.com/CLRT19"]{GitHub} @entity['middot]
    @a[href: "https://www.linkedin.com/in/clrt19"]{LinkedIn}}
@@ -104,7 +104,7 @@
  @h2{Education}
  @education-item["Princeton University" "M.S.E. in Computer Science" @list{2025 @entity['ndash] 2027}]
  @education-item["University of Wisconsin Madison" "B.S. in Math & CS" @list{Sept 2021 @entity['ndash] May 2025}]{
-  @p{GPA 3.987/4.000 @entity['middot] @a[href: "courses.html"]{Courses taken}}}
+  @p{GPA 3.987/4.000 @entity['middot] @a[href: "pages/courses.html"]{Courses taken}}}
  @education-item["Tianjin No. 1 High School" "" @list{Sept 2018 @entity['ndash] July 2021}]
 
  @h2{Service}
@@ -139,7 +139,7 @@
    "Fall 2022"
    ""]
 
- @h2{@a[href: "misc.html"]{Miscellaneous}}
+ @h2{@a[href: "pages/misc.html"]{Miscellaneous}}
  })
 
 (define doc
