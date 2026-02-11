@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><title>Cheatsheet - Linrong Cai</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/main.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+<style>.theorem, .definition, .remark { margin-bottom: 1em; }
+.theorem { border-left: 3px solid #0051c9; padding-left: 0.8em; }
+.definition { border-left: 3px solid #28a745; padding-left: 0.8em; }
+.remark { border-left: 3px solid #999; padding-left: 0.8em; font-style: italic; }</style></head>
+<body><a class="back" href="../index.html">&larr; Back</a>
+<h1 style="text-align: center">Inequalities Cheatsheet</h1>
+
+<h2>Basic Inequalities</h2>
+
+<div class="theorem"><span class="bold">Theorem (AM-GM). </span>For non-negative reals $a_1, a_2, \ldots, a_n$,
+$$\frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n}$$
+with equality iff $a_1 = a_2 = \cdots = a_n$.</div>
+
+<div class="theorem"><span class="bold">Theorem (Cauchy-Schwarz). </span>For reals $a_i, b_i$,
+$$\left(\sum_{i=1}^n a_i b_i\right)^2 \leq \left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right)$$
+with equality iff $a_i / b_i$ is constant.</div>
+
+<div class="theorem"><span class="bold">Theorem (Jensen's Inequality). </span>If $f$ is convex and $\lambda_1, \ldots, \lambda_n \geq 0$ with $\sum \lambda_i = 1$, then
+$$f\left(\sum_{i=1}^n \lambda_i x_i\right) \leq \sum_{i=1}^n \lambda_i f(x_i)$$</div>
+
+<h2>Probability &amp; Concentration</h2>
+
+<div class="theorem"><span class="bold">Theorem (Markov's Inequality). </span>For a non-negative random variable $X$ and $a &gt; 0$,
+$$P(X \geq a) \leq \frac{E[X]}{a}$$</div>
+
+<div class="theorem"><span class="bold">Theorem (Chebyshev's Inequality). </span>For a random variable $X$ with finite mean $\mu$ and variance $\sigma^2$,
+$$P(|X - \mu| \geq k\sigma) \leq \frac{1}{k^2}$$</div>
+
+<div class="theorem"><span class="bold">Theorem (Hoeffding's Inequality). </span>Let $X_1, \ldots, X_n$ be independent with $X_i \in [a_i, b_i]$. Then
+$$P\left(\left|\bar{X} - E[\bar{X}]\right| \geq t\right) \leq 2\exp\left(\frac{-2n^2t^2}{\sum_{i=1}^n (b_i - a_i)^2}\right)$$</div>
+
+<h2>Linear Algebra</h2>
+
+<div class="definition"><span class="bold">Definition (Positive Definite). </span>A symmetric matrix $A \in \mathbb{R}^{n \times n}$ is positive definite if $x^T A x &gt; 0$ for all $x \neq 0$.</div>
+
+<div class="theorem"><span class="bold">Theorem (Spectral Norm Bound). </span>For any matrix $A \in \mathbb{R}^{m \times n}$,
+$$\|A\|_2 = \sigma_{\max}(A) \leq \|A\|_F \leq \sqrt{r} \cdot \|A\|_2$$
+where $r = \text{rank}(A)$.</div>
+
+<div class="remark"><span class="bold">Remark. </span>These bounds are tight: equality in $\|A\|_2 \leq \|A\|_F$ holds when $A$ has rank 1.</div></body></html>

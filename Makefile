@@ -1,4 +1,4 @@
-all: assets/main.css index.html pages/courses.html
+all: assets/main.css index.html pages/courses.html pages/cheatsheet.html
 
 assets/main.css: styles/main.scss
 	@mkdir -p assets
@@ -8,6 +8,9 @@ index.html: index.rkt pubs.rkt lib.rkt
 	racket $< > $@
 
 pages/courses.html: courses.rkt
+	racket $< > $@
+
+pages/cheatsheet.html: cheatsheet.rkt
 	racket $< > $@
 
 serve:

@@ -150,6 +150,9 @@
 
  @h2{@a[href: "pages/misc.html"]{Miscellaneous}}
 
+ @h2{Office Hours}
+ @p{Monday 5pm to 7pm @entity['middot] Tuesday 4pm to 6pm @entity['middot] FC 010}
+
  @p[style: "font-size: 0.75em; color: #999; margin-top: 3em; text-align: center"]{
    Website design adapted from @a[href: "https://www.chajed.io/"]{Professor Tej Chajed}.}
  })
