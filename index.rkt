@@ -23,7 +23,7 @@
  @link[rel: "stylesheet" href: "https://fonts.googleapis.com/css?family=Open+Sans:400,600"]
  })
 
-(define cv-link @file-link["CV.pdf"]{CV})
+(define cv-link @file-link["files/CV.pdf"]{CV})
 
 (define (experience-item title period description)
   @div[class: "experience"]{
@@ -77,45 +77,69 @@
   }
   @img[class: "portrait"
        alt: "Chris Cai picture"
-       src: "img/self.jpeg"
-       width: "200em"
-       height: "200em"]
+       src: "img/self.jpeg"]
  }
 
  @h2{Publications}
  @pubs
 
- @h2{Experience}
+ @h2{Research}
  @experience-item[
    @list{Research Assistant with Professor @a[href: "https://liuzhuang13.github.io/"]{Zhuang Liu}}
    @list{Aug 2025 @entity['ndash] present}
    "Working on Reasoning VLM projects."]
  @experience-item[
    @list{Undergraduate Research Assistant with Professor @a[href: "https://www.jelena-diakonikolas.com"]{Jelena Diakonikolas}}
-   @list{Jan 2024 @entity['ndash] 2025}
+   @list{Jan 2024 @entity['ndash] May 2025}
    "Learning with Distribution Mixtures and Noise."]
  @experience-item[
    @list{ML Research Assistant with Professor @a[href: "https://pages.cs.wisc.edu/~fredsala/"]{Frederic Sala}}
-   @list{June 2022 @entity['ndash] 2025}
+   @list{June 2022 @entity['ndash] May 2025}
    "Weak Supervision, Alignment, and Robustification."]
  @experience-item[
    @list{Madison Experimental Mathematics Lab @entity['mdash] advised by Professor @a[href: "https://www.caglaruyanik.com"]{Caglar Uyanik}}
    "Spring 2022"
    "Researched the probability that two random elements of SL2(Z) generate a free group."]
- @experience-item[
-   @list{Grader for Math 435 Cryptography @entity['mdash] Professor @a[href: "https://pages.cs.wisc.edu/~bach/bach.html"]{Eric Bach}}
-   "Fall 2022"
-   ""]
- @experience-item[
-   @list{Grader for Math 475 Combinatorics @entity['mdash] Professor @a[href: "https://math.wisc.edu/staff/mitchel-keller/"]{Mitch Keller}}
-   "Fall 2023"
-   ""]
 
  @h2{Education}
  @education-item["Princeton University" "M.S.E. in Computer Science" @list{2025 @entity['ndash] 2027}]
- @education-item["University of Wisconsin Madison" "B.S. in Math & CS" @list{Sept 2021 @entity['ndash] 2025}]{
+ @education-item["University of Wisconsin Madison" "B.S. in Math & CS" @list{Sept 2021 @entity['ndash] May 2025}]{
   @p{GPA 3.987/4.000 @entity['middot] @a[href: "courses.html"]{Courses taken}}}
  @education-item["Tianjin No. 1 High School" "" @list{Sept 2018 @entity['ndash] July 2021}]
+
+ @h2{Service}
+ @h3{At Princeton}
+ @experience-item[
+   @list{@a[href: "https://www.cs.princeton.edu/courses/archive/spring26/cos240/"]{COS 240} Preceptor @entity['mdash] Professor @a[href: "https://www.cs.princeton.edu/people/profile/ranr"]{Ran Raz}}
+   "Spring 2026"
+   ""]
+ @experience-item[
+   @list{@a[href: "https://www.cs.princeton.edu/courses/archive/fall25/cos240/"]{COS 240} Preceptor @entity['mdash] Professor @a[href: "https://www.cs.princeton.edu/~zdvir/"]{Zeev Dvir}}
+   "Fall 2025"
+   ""]
+ @h3{At Madison}
+ @experience-item[
+   @list{Math Tutor @entity['mdash] @a[href: "https://www.housing.wisc.edu/undergraduate/experience/academics/#tutoring"]{University Housing}}
+   @list{Fall 2024, Spring 2025}
+   ""]
+ @experience-item[
+   @list{@a[href: "https://www.jelena-diakonikolas.com/cs541-s24.html"]{CS 541} (DS Theory @entity['amp] Algorithms) Grader}
+   "Spring 2024"
+   ""]
+ @experience-item[
+   "MATH 475 (Combinatorics) Grader"
+   @list{Fall 2023, Spring 2024}
+   ""]
+ @experience-item[
+   "CS 540 (Intro to AI) Peer Mentor"
+   @list{Fall 2023, Spring 2024}
+   ""]
+ @experience-item[
+   @list{MATH 435 (Cryptography) Grader @entity['mdash] Professor @a[href: "https://pages.cs.wisc.edu/~bach/bach.html"]{Eric Bach}}
+   "Fall 2022"
+   ""]
+
+ @h2{@a[href: "misc.html"]{Miscellaneous}}
  })
 
 (define doc
