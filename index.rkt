@@ -110,7 +110,9 @@
   @p{GPA 3.974/4.000}}
  @education-item["Tianjin No. 1 High School" "Experimental Class" @list{Fall 2018 @entity['ndash] Spring 2021}]
 
- @h2{Service}
+ @h2{Teaching and Service}
+
+  @p[style: "font-style: italic; margin-bottom: 1.5em"]{@a[href: "https://www.francissu.com/post/the-lesson-of-grace-in-teaching"]{The Lesson of Grace in Teaching}, by Francis Su.@sup{@a[href: "#fn1" style: "text-decoration: none"]{1}}}
  @h3{At Princeton}
  @experience-item[
    @list{@a[href: "https://www.cs.princeton.edu/courses/archive/spring26/cos240/"]{COS 240} Preceptor @entity['mdash] Professor @a[href: "https://www.cs.princeton.edu/people/profile/ranr"]{Ran Raz}}
@@ -153,7 +155,9 @@
  @h2{Office Hours}
  @p{Monday 5pm to 7pm @entity['middot] Tuesday 4pm to 6pm @entity['middot] FC 010}
 
- @p[style: "font-size: 0.75em; color: #999; margin-top: 3em; text-align: center"]{
+ @p[id: "fn1" style: "font-size: 0.75em; color: #999; margin-top: 3em; text-align: center"]{
+   1. Found from @a[href: "https://www.caglaruyanik.com/teaching"]{Professor Caglar Uyanik's teaching page}.}
+ @p[style: "font-size: 0.75em; color: #999; text-align: center"]{
    Website design adapted from @a[href: "https://www.chajed.io/"]{Professor Tej Chajed}.}
  })
 
