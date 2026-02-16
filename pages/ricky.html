@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ricky</title>
+    <style>
+body {
+  margin: 2em auto;
+  max-width: 800px;
+  font-size: 18px;
+  padding: 1em;
+}
+h1, h2, h3 {
+  line-height: 1.2;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.lightbox.active {
+  display: flex;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <a href="misc.html">&larr; back</a>
+    <h2>Ricky</h2>
+
+    <div class="gallery">
+        <img src="../img/Ricky.jpg" alt="Ricky">
+        <img src="../img/IMG_1264.jpeg" alt="Ricky">
+        <img src="../img/IMG_4428.JPG" alt="Ricky">
+        <img src="../img/IMG_1001.jpeg" alt="Ricky">
+        <img src="../img/IMG_4427.JPG" alt="Ricky">
+        <img src="../img/IMG_8983.jpeg" alt="Ricky">
+        <img src="../img/IMG_7792.jpeg" alt="Ricky">
+        <img src="../img/IMG_5644.jpeg" alt="Ricky">
+    </div>
+
+    <div class="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" alt="Ricky">
+    </div>
+
+    <script>
+    document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.getElementById('lightbox-img').src = img.src;
+            document.querySelector('.lightbox').classList.add('active');
+        });
+    });
+    </script>
+</body>
+
+</html>
