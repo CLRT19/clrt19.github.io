@@ -16,6 +16,15 @@ body {
 h1, h2, h3 {
   line-height: 1.2;
 }
+.featured {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.featured img {
+  max-width: 80%;
+  border-radius: 4px;
+  cursor: pointer;
+}
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -61,6 +70,12 @@ h1, h2, h3 {
     <a href="misc.html">&larr; back</a>
     <h2>Ricky</h2>
 
+    <p style="text-align: center; font-style: italic;">I Love You To The Moon and Back.</p>
+
+    <div class="featured">
+        <img src="../img/ricky_2026_03_04.jpg" alt="Ricky">
+    </div>
+
     <div class="gallery">
         <img src="../img/Ricky.jpg" alt="Ricky">
         <img src="../img/IMG_1264.jpeg" alt="Ricky">
@@ -77,7 +92,7 @@ h1, h2, h3 {
     </div>
 
     <script>
-    document.querySelectorAll('.gallery img').forEach(img => {
+    document.querySelectorAll('.featured img, .gallery img').forEach(img => {
         img.addEventListener('click', () => {
             document.getElementById('lightbox-img').src = img.src;
             document.querySelector('.lightbox').classList.add('active');
