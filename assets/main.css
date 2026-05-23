@@ -58,6 +58,9 @@ blockquote {
 .pub-conference {
   display: inline-block; }
 
+.pub-award {
+  font-weight: 600; }
+
 .self-author {
   font-weight: 600; }
 

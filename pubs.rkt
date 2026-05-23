@@ -14,7 +14,7 @@
        conf?)
   (conf (format "~a (~a)" name short) short to-appear?))
 
-(struct pub (key title conference slides? video-url url authors)
+(struct pub (key title conference slides? video-url url paper-url award authors)
   #:constructor-name mk-publication)
 (define/contract (mk-pub
                   key
@@ -23,6 +23,8 @@
                   #:slides? [slides? #f]
                   #:video-url [video-url null]
                   #:url [url null]
+                  #:paper-url [paper-url #f]
+                  #:award [award #f]
                   #:authors authors)
   (->* (string?
         #:title any/c
@@ -30,9 +32,11 @@
         #:authors (listof any/c))
        (#:slides? boolean?
         #:video-url (or/c string? null)
-        #:url (or/c string? null))
+        #:url (or/c string? null)
+        #:paper-url (or/c string? #f)
+        #:award (or/c string? #f))
        pub?)
-  (mk-publication key title conference slides? video-url url authors))
+  (mk-publication key title conference slides? video-url url paper-url award authors))
 (define (pub-published? pub)
   (not (conf-to-appear? (pub-conference pub))))
 
@@ -74,10 +78,11 @@
 (define/contract (html/pub-links pub)
   (-> pub? any/c)
   (let ([key (pub-key pub)]
-        [url (pub-url pub)])
-    @ifdef[(or url (pub-published? pub))]{
+        [url (pub-url pub)]
+        [paper-url (pub-paper-url pub)])
+    @ifdef[(or paper-url url (pub-published? pub))]{
  @div[class: "pub-links"]{
-  @a[href: (or url @~a{papers/@|key|.pdf})]{
+  @a[href: (or paper-url url @~a{papers/@|key|.pdf})]{
    @img[title: "Paper" 'alt: "paper icon"
         src: "assets/file.svg" 'height: 16 'width: 16]
   }
@@ -100,6 +105,8 @@
   @html/pub-links[pub]
  }
  @html/authors[pub]
+ @(let ([award (pub-award pub)])
+    (if award @div[class: "pub-award"]{@award} ""))
  })
 
 ;; The publication list
@@ -111,6 +118,12 @@
 
          [pub-list
           (list
+            (mk-pub "vero:arxiv2026"
+                    #:title "Vero: An Open RL Recipe for General Visual Reasoning"
+                    #:conference (mk-conference "arXiv preprint" "arXiv 2026")
+                    #:url "https://vero-reasoning.github.io/"
+                    #:paper-url "https://arxiv.org/pdf/2604.04917"
+                    #:authors (list "Gabriel Sarch*" chris* "Qunzhong Wang" "Haoyang Wu" "Danqi Chen" "Zhuang Liu"))
             (mk-pub "boxwrench:neurips2024"
                     #:title "Stronger Than You Think: Benchmarking Weak Supervision on Realistic Tasks"
                     #:conference (mk-conference
@@ -122,8 +135,9 @@
                     #:title "Zero-Shot Robustification of Zero-Shot Models"
                     #:conference (mk-conference
                                   "International Conference on Learning Representations"
-                                  "ICLR 2024")
+                                  "ICLR 2024, NeurIPS 2023 R0-FoMo Oral")
                     #:url "https://arxiv.org/pdf/2309.04344"
+                    #:award "Best Paper Honorable Mention"
                     #:authors (list "Dyah Adila*" "Changho Shin*" chris "Frederic Sala"))
            )])
     (map html/pub pub-list)))
