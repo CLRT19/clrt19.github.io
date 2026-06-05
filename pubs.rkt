@@ -120,7 +120,7 @@
           (list
             (mk-pub "vero:arxiv2026"
                     #:title "Vero: An Open RL Recipe for General Visual Reasoning"
-                    #:conference (mk-conference "arXiv preprint" "arXiv 2026")
+                    #:conference (mk-conference "arXiv preprint" "arXiv 2026, CVPR 2026 DataMFM Oral")
                     #:url "https://vero-reasoning.github.io/"
                     #:paper-url "https://arxiv.org/pdf/2604.04917"
                     #:authors (list "Gabriel Sarch*" chris* "Qunzhong Wang" "Haoyang Wu" "Danqi Chen" "Zhuang Liu"))
