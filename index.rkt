@@ -116,6 +116,10 @@
   @p[style: "font-style: italic; margin-bottom: 1.5em"]{@a[href: "https://www.francissu.com/post/the-lesson-of-grace-in-teaching"]{The Lesson of Grace in Teaching}, by Francis Su.@sup{@a[href: "#fn1" style: "text-decoration: none"]{1}}}
  @h3{At Princeton}
  @experience-item[
+   @list{@a[href: "https://princeton-cos324.github.io/"]{COS 324} Teaching Assistant}
+   "Fall 2026"
+   ""]
+ @experience-item[
    @list{@a[href: "https://www.cs.princeton.edu/courses/archive/spring26/cos240/"]{COS 240} Preceptor @entity['mdash] Professor @a[href: "https://www.cs.princeton.edu/people/profile/ranr"]{Ran Raz}}
    "Spring 2026"
    ""]
@@ -147,7 +151,7 @@
  @h3{Others}
 
  @experience-item[
-   @list{Reviewer: NeurIPS 2025}
+   @list{Reviewer: NeurIPS 2025, 2026}
    ""
    ""]
 
