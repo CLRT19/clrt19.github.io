@@ -57,7 +57,8 @@
    Previously a Math and CS undergraduate at
    @a[href: "https://www.wisc.edu/"]{University of Wisconsin Madison}.
    My current research focuses on reasoning in vision-language models, working with Professor
-   @a[href: "https://liuzhuang13.github.io/"]{Zhuang Liu} at Princeton.}
+   @a[href: "https://liuzhuang13.github.io/"]{Zhuang Liu} at Princeton.
+   I was named a @a[href: "https://www.siebelscholars.com/scholar-profile/3998/"]{Siebel Scholar} (Class of 2027).}
    @;{@p{I have also done research focusing on data-efficient machine learning, foundations
    of ML, and robustness to mixed distributions, learning with
    noise and limited data.}}
